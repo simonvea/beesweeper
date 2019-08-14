@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Beesweeper</title>
+</head>
+<body>
+  <form> 
+      <input type="range" min="20" max="100" value="50" class="slider" id="mines" name="mines">
+  </form>
+  <canvas></canvas>
+  <section>
+    <h4>Flagged: <span id="flagged">0</span></h4>
+  </section>
+  <button id="restart">Restart</button>
+  <script src="build/make2dArray.js"></script>
+  <script src="build/cell.js"></script>
+  <script src="build/setup.js"></script>
+  <script src="build/restart.js"></script>
+  <script src="build/main.js"></script>
+
+</body>
+</html>
