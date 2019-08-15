@@ -61,8 +61,8 @@ function handleTouch(event) {
     event.preventDefault();
     touchEnd = Date.now();
     var rect = this.getBoundingClientRect();
-    var x = event.touches[0].clientX - rect.left;
-    var y = event.touches[0].clientY - rect.top;
+    var x = event.targetTouches[0].clientX - rect.left;
+    var y = event.targetTouches[0].clientY - rect.top;
     if (touchEnd - touchStart > 500) {
         for (var i = 0; i < game.cols; i++) {
             for (var j = 0; j < game.rows; j++) {

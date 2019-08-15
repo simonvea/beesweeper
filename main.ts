@@ -68,8 +68,9 @@ function handleClick(this: HTMLCanvasElement, event: MouseEvent) {
     event.preventDefault();
     touchEnd = Date.now();
     const rect = this.getBoundingClientRect();
-    const x = event.touches[0].clientX - rect.left;
-    const y = event.touches[0].clientY - rect.top;
+
+    const x = event.targetTouches[0].clientX - rect.left;
+    const y = event.targetTouches[0].clientY - rect.top;
     if(touchEnd - touchStart > 500) {
       for(let i = 0; i < game.cols; i++) {
         for(let j = 0; j < game.rows; j++) {
